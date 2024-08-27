@@ -1,16 +1,21 @@
-import './index.css'
-import NavbarComponent from './components/Navbar';
-import HomeComponent from './components/Home';
+import "./index.css";
+import NavbarComponent from "./components/Navbar";
+import HomeComponent from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-
+const App: React.FC = () => {
   return (
     <>
-      <NavbarComponent />
-      <HomeComponent/>
-      
+      <Router>
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<HomeComponent />} />
+          <Route path="/home" element={<HomeComponent />} />
+          {/* <Route path="users/:id" element={<Users />} /> */}
+        </Routes>
+      </Router>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
