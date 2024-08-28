@@ -4,7 +4,7 @@ import React from "react";
 
 const HomeComponent: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className="flex flex-col w-full min-h-screen bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Header Section */}
       <header className="bg-gray-700 text-white py-6 md:py-8 shadow-lg">
         <div className="container mx-auto px-4 md:px-6">
